@@ -1,15 +1,14 @@
 # cv-2026 — Portfolio of Meharaj Sami Siam
 
-A clean, multi-page personal portfolio (Applied AI Engineer). Pure static HTML/CSS/JS —
-**no build step, no dependencies** — so it hosts free anywhere.
+A clean, single-page personal portfolio (Applied AI Engineer). Pure static HTML/CSS/JS —
+**no build step, no dependencies** — so it hosts free anywhere. Fixed sidebar (identity +
+socials + résumé) and a tabbed main panel, fully monochrome (Inter).
 
 ## Pages
-- `index.html` — Home (hero, what I do, featured project, CTA)
-- `about.html` — Bio, experience timeline, skills, education
-- `projects.html` — Project grid
-- `dorpon.html` — Dorpon case study (linked from Projects)
-- `contact.html` — Contact methods
-- `style.css` — shared styles · `script.js` — nav toggle + scroll reveal
+- `index.html` — Single page with sidebar + tabbed sections (Experience, Projects, Skills,
+  Education, Contact). Tabs are hash-linkable, e.g. `index.html#projects`.
+- `dorpon.html` — Dorpon case study (linked from the Projects tab)
+- `style.css` — shared styles · `script.js` — tab switching, collapsible cards, footer year
 
 ## Résumé
 The nav "Resume" button and Contact "Download résumé" link point to `cv.pdf` — the only résumé
