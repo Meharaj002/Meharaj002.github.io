@@ -126,6 +126,13 @@ svg { display: block; }
 .skill-group { margin-bottom: 24px; }
 .skill-group h4 { margin: 0 0 11px; font-size: .98rem; font-weight: 700; }
 
+/* certification list (Education) */
+.cert-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 11px; }
+.cert-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
+.cert-list li:last-child { padding-bottom: 0; border-bottom: none; }
+.cert-name { font-weight: 600; font-size: .96rem; }
+.cert-org { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+
 /* ---------- buttons ---------- */
 .btn { display: inline-flex; align-items: center; gap: 7px; padding: 10px 18px; border-radius: 9px; font-weight: 600; font-size: .89rem; cursor: pointer; transition: background .18s, border-color .18s, color .18s; }
 .btn-primary { background: var(--ink); color: #fff; border: 1px solid var(--ink); }
