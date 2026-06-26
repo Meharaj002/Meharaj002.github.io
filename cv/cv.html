@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meharaj Sami Siam — CV</title>
+<style>
+  /* Clean, white, single-column, ATS-friendly. Print to PDF: Ctrl/Cmd+P →
+     "Save as PDF", margins "Default/None", background graphics OFF. */
+  :root { --ink:#1a1a1a; --muted:#555; --rule:#c9c9c9; --link:#1a4d8f; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; color: var(--ink); }
+  body {
+    font-family: "Calibri", "Carlito", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.2pt; line-height: 1.28;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { max-width: 8.0in; margin: 0 auto; padding: 0.42in 0.55in; }
+  a { color: var(--link); text-decoration: none; }
+  h1 { font-size: 21pt; letter-spacing: 0.5px; margin: 0; font-weight: 700; }
+  .title { font-size: 10.6pt; font-weight: 700; color: var(--ink); margin: 2px 0 3px; }
+  .contact { font-size: 9.3pt; color: var(--muted); margin-bottom: 8px; }
+  .contact a { color: var(--muted); }
+  h2 {
+    font-size: 10.1pt; text-transform: uppercase; letter-spacing: 0.8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 2px;
+    margin: 10px 0 5px; font-weight: 700;
+  }
+  .summary { margin: 0 0 2px; text-align: justify; }
+  .comp { margin: 0; color: #222; }
+  .role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; }
+  .role .pos { font-weight: 700; }
+  .role .date { color: var(--muted); font-size: 9.3pt; white-space: nowrap; padding-left: 10px; }
+  ul { margin: 3px 0 2px; padding-left: 17px; }
+  li { margin: 2.5px 0; }
+  .skills li { margin: 3px 0; }
+  .skills ul { list-style: none; padding-left: 0; margin: 2px 0; }
+  b, strong { font-weight: 700; }
+  .demo { font-weight: 700; font-size: 10.5pt; margin: 2px 0 3px; }
+  .demo a { color: var(--link); }
+  @page { size: A4; margin: 0; }
+  @media print { .page { margin: 0; max-width: none; padding: 0.4in 0.5in; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>MEHARAJ SAMI SIAM</h1>
+  <div class="title">Applied AI Engineer — Agentic AI, LLM, RAG &amp; MCP</div>
+  <div class="contact">
+    Dhaka, Bangladesh &nbsp;|&nbsp; mssiam12@gmail.com &nbsp;|&nbsp; +880 1796-537490 &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/meharaj-sami-siam-a4b730213">LinkedIn</a> &nbsp;|&nbsp;
+    <a href="https://github.com/Meharaj002">GitHub</a> &nbsp;|&nbsp;
+    <a href="https://dorpon-eyewear.netlify.app">Dorpon (live demo)</a>
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Applied AI Engineer building production, agentic AI and <b>Large Language Model (LLM)</b> applications —
+    three-tier LLM routing, <b>Retrieval-Augmented Generation (RAG)</b> pipelines, <b>Model Context Protocol
+    (MCP)</b> integrations, and LLM fine-tuning on <b>AWS Bedrock (Anthropic Claude)</b>. Strong full-stack
+    (Django, Next.js, Vue) and REST API / SDK engineering foundation, with hands-on machine learning, prompt
+    engineering, and scalable cloud deployment (AWS). Has delivered <b>13+ projects end-to-end</b>,
+    from architecture and design through production deployment, including a multi-tenant AI platform hardened
+    to enterprise security standards and <b>6 production SDKs</b>.
+  </p>
+
+  <h2>Core Competencies</h2>
+  <p class="comp">
+    Agentic AI &amp; MCP &nbsp;|&nbsp; Large Language Models (LLMs) &nbsp;|&nbsp; Retrieval-Augmented Generation
+    (RAG) &nbsp;|&nbsp; LLM Fine-Tuning &nbsp;|&nbsp; Prompt Engineering &nbsp;|&nbsp; Machine Learning
+    &nbsp;|&nbsp; Generative AI &nbsp;|&nbsp; AWS Bedrock (Claude) &nbsp;|&nbsp; REST API &amp; SDK Design
+    &nbsp;|&nbsp; API Integration &nbsp;|&nbsp; Multi-Tenant Architecture &nbsp;|&nbsp; Full-Stack (Django,
+    Next.js, Vue) &nbsp;|&nbsp; Application Security &nbsp;|&nbsp; Cloud &amp; DevOps (AWS, CI/CD)
+  </p>
+
+  <h2>Professional Experience</h2>
+
+  <div class="role"><span class="pos">Software Engineer — WebAlive</span><span class="date">Jan 2026 – Present</span></div>
+  <ul>
+    <li>Built <b>Cortex AI</b>, a multi-tenant AI agent platform: a three-tier <b>Large Language Model (LLM)</b>
+      routing engine (confidence, action, and knowledge tiers) on AWS Bedrock (Anthropic Claude), a
+      <b>Retrieval-Augmented Generation (RAG)</b> pipeline with vector search, a Django / Django REST Framework
+      backend and Vue dashboard, and a plugin protocol — delivered in a focused six-week sprint and deployed on
+      <b>AWS ECS (Fargate)</b>.</li>
+    <li>Led a comprehensive <b>security-hardening</b> initiative: Argon2 password hashing, split-key JWT with
+      revocation, SSRF and CORS allowlisting, HttpOnly cookies with CSRF protection, role-based access control
+      (RBAC), Content-Security-Policy, PII redaction and retention controls, per-tenant rate limiting,
+      IAM-scoped model access, and <b>RAG prompt-injection mitigation</b>.</li>
+    <li>Built <b>Store Migration AI</b>, a <b>Model Context Protocol (MCP)</b>-based Shopify-to-WebCommander
+      migration pipeline with machine-learning-driven API matching, and drove API standardization for AI-agent
+      and MCP consumption.</li>
+    <li>Lead developer on a <b>clinical conversational AI portal</b> (Next.js): session and survey lifecycle, a
+      form scenario engine, and a two-tier chatbot lifecycle; reviewed the RAG ingestion pipeline for a
+      clinical-genetics knowledge assistant.</li>
+  </ul>
+
+  <div class="role"><span class="pos">Software Engineer — Bitmascot</span><span class="date">Jun 2024 – Dec 2025</span></div>
+  <ul>
+    <li>Architected and shipped <b>6 production REST API SDKs</b> (Python, PHP, C# / .NET) for
+      subscription-commerce, events, and e-commerce platforms — 25+ entity modules each with full CRUD,
+      OAuth 2.0 authentication, thread-safe token refresh, pagination, and API versioning.</li>
+    <li>Built <b>E.L.I Bot</b>, an enterprise customer-support chatbot, with an <b>LLM fine-tuning</b> pipeline,
+      a custom text-chunking algorithm, training UX/UI, and a document-to-training-data flow.</li>
+    <li>Delivered core backend APIs (PHP) for a subscription-commerce platform and <b>tech-led a C# / .NET
+      SDK</b>, setting the architecture for HTTP-client management, dual authentication, and API versioning,
+      and reviewing the full codebase.</li>
+  </ul>
+
+  <div class="role"><span class="pos">Founder &amp; Lead Developer, Medview &nbsp;·&nbsp; Co-Founder &amp; CTO, Project Durjo</span><span class="date">2022 – 2024</span></div>
+  <ul>
+    <li>Founded two <b>government-funded (Bangladesh ICT Division)</b> startups: a medicine-management platform with
+      OCR prescription reading, and a disaster-management robotics system — led teams and technical strategy.</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <div class="role"><span class="pos">Dorpon — Agent-Ready Eyewear Commerce</span></div>
+  <div class="demo">Live demo:
+    <a href="https://dorpon-eyewear.netlify.app">dorpon-eyewear.netlify.app</a>
+    &nbsp;|&nbsp; Code: <a href="https://github.com/Meharaj002">github.com/Meharaj002</a></div>
+  <ul>
+    <li>Full-stack premium eyewear store (Next.js, Django / DRF) with browser-based <b>virtual try-on</b>
+      and an AI shopping concierge on AWS Bedrock (Anthropic Claude).</li>
+    <li>Exposed the store to AI agents through a stateless <b>Model Context Protocol (MCP)</b> server and a
+      <b>Universal Commerce Protocol (UCP)</b> REST layer (discovery manifest, JSON-Schema actions, RFC 9457
+      errors), aligned with the Agentic Commerce Protocol — one shared tool registry powering the web app, MCP,
+      and REST. Deployed on free-tier cloud infrastructure (Render, Netlify, Neon, Supabase).</li>
+  </ul>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+  <ul>
+    <li><b>AI &amp; Machine Learning:</b> Agentic AI, Model Context Protocol (MCP), Large Language Models
+      (LLMs), Retrieval-Augmented Generation (RAG) — chunking, embeddings, vector databases, LLM fine-tuning,
+      prompt engineering, Generative AI, Natural Language Processing (NLP), AWS Bedrock (Anthropic Claude),
+      prompt-injection mitigation; PyTorch, TensorFlow, Keras</li>
+    <li><b>Languages:</b> Python, PHP, JavaScript, TypeScript, C# / .NET, Java, C/C++, SQL</li>
+    <li><b>Frameworks &amp; Libraries:</b> Django, Django REST Framework (DRF), async DRF (adrf), Next.js,
+      Vue.js, React, Vitest</li>
+    <li><b>Databases &amp; Caching:</b> PostgreSQL, Redis, DynamoDB, MySQL, SQLite, vector databases</li>
+    <li><b>Cloud &amp; DevOps:</b> AWS (ECS / Fargate, Bedrock, IAM, RDS), CI/CD, Git, GitHub,
+      Bitbucket, Git LFS</li>
+    <li><b>Security:</b> OAuth 2.0, JWT, Argon2, CSRF / CORS / SSRF protection, RBAC, Content-Security-Policy,
+      rate limiting, PII handling</li>
+    <li><b>Practices &amp; Tools:</b> REST API design, SDK design, API integration, microservices, multi-tenant
+      architecture, Agile, Jira, Confluence</li>
+  </ul>
+  </div>
+
+  <h2>Education &amp; Credentials</h2>
+  <ul>
+    <li><b>B.Sc. in Computer Science</b> — BRAC University &nbsp;<span style="color:#555">(2020 – 2024)</span></li>
+    <li><b>Certifications:</b> Python Programming · Python Data Structures — University of Michigan;
+      &nbsp;Social Media Marketing — Meta</li>
+    <li><b>Award:</b> Runner-Up, Project Showcase — 5th International Tech Carnival, Bangladesh ICT Division</li>
+  </ul>
+
+</div>
+</body>
+</html>

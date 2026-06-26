@@ -1,0 +1,14 @@
+# Private CV working materials — kept locally, never published
+cv/notes.txt
+cv/engineering-contributions-meharaj-sami.md
+cv/Resume_MeharajSamiSiam_2024.pdf
+
+# Local tooling config
+.claude/
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+desktop.ini
+*~
+.vscode/

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Meharaj Sami Siam</title>
+<meta name="description" content="Selected projects by Meharaj Sami Siam — agentic AI platforms, LLM systems, and production SDKs." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav"><div class="container nav-inner">
+  <a class="brand" href="index.html">Meharaj<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="cv.pdf" class="nav-cta">Resume</a>
+  </nav>
+</div></header>
+
+<main>
+  <section class="hero" style="padding-bottom:18px"><div class="container">
+    <div class="eyebrow">Projects</div>
+    <h1 style="font-size:clamp(2rem,4.5vw,2.8rem)">Selected work</h1>
+    <p class="lead" style="font-size:1.08rem">Agentic AI platforms, LLM systems, and production engineering. Some are enterprise/internal, so links are limited; Dorpon is fully live.</p>
+  </div></section>
+
+  <section style="padding-top:8px"><div class="container">
+    <div class="grid grid-2 reveal">
+
+      <!-- Dorpon (featured) -->
+      <div class="card feature" style="grid-column:1 / -1">
+        <span class="ptype">Featured · Full-Stack · Agentic AI · MCP / UCP</span>
+        <h3 style="font-size:1.25rem;margin-top:6px">Dorpon — Agent-Ready Eyewear Commerce</h3>
+        <p>A premium eyewear store with browser-based <strong>virtual try-on</strong> and an AI shopping
+          concierge — and, uniquely, exposed to AI agents through a stateless <strong>Model Context Protocol
+          (MCP)</strong> server and a <strong>UCP commerce protocol</strong>, all driven by one shared tool
+          registry (web app, MCP, and REST). Deployed end-to-end on free-tier cloud.</p>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag accent">MCP</span><span class="tag accent">UCP</span>
+          <span class="tag">Next.js</span><span class="tag">Django / DRF</span>
+          <span class="tag">AWS Bedrock (Claude)</span><span class="tag">MediaPipe</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        <a class="btn btn-primary" href="https://dorpon-eyewear.netlify.app">Live demo →</a>
+        <a class="btn btn-ghost" href="dorpon.html">Case study</a>
+      </div>
+
+      <!-- Cortex AI -->
+      <div class="card">
+        <span class="ptype">AI Platform · Enterprise</span>
+        <h3>Cortex AI</h3>
+        <p>Multi-tenant AI agent platform: three-tier LLM routing (confidence → action → knowledge) on AWS
+          Bedrock, a RAG pipeline with vector search, a Django/DRF backend + Vue dashboard, and a plugin
+          protocol — hardened with enterprise-grade security and deployed on AWS ECS.</p>
+        <div class="tags">
+          <span class="tag accent">LLM routing</span><span class="tag accent">RAG</span>
+          <span class="tag">AWS Bedrock</span><span class="tag">Django</span><span class="tag">Vue</span>
+          <span class="tag">Multi-tenant</span>
+        </div>
+      </div>
+
+      <!-- E.L.I Bot -->
+      <div class="card">
+        <span class="ptype">Conversational AI · Enterprise</span>
+        <h3>E.L.I Bot</h3>
+        <p>Enterprise customer-support chatbot, taken from prototype to production: an LLM fine-tuning pipeline
+          with a custom text-chunking algorithm, a training UX/UI, and a document-to-training-data flow.</p>
+        <div class="tags">
+          <span class="tag accent">LLM fine-tuning</span><span class="tag">Python</span>
+          <span class="tag">Chunking</span><span class="tag">Chat UI</span>
+        </div>
+      </div>
+
+      <!-- Store Migration AI -->
+      <div class="card">
+        <span class="ptype">AI / ML · Tooling</span>
+        <h3>Store Migration AI</h3>
+        <p>An <strong>MCP-based</strong> pipeline to migrate e-commerce stores from Shopify to WebCommander,
+          with machine-learning-driven external-API matching and a trained matching model.</p>
+        <div class="tags">
+          <span class="tag accent">MCP</span><span class="tag accent">ML</span>
+          <span class="tag">Python</span><span class="tag">Migration</span>
+        </div>
+      </div>
+
+      <!-- Clinical Conversational AI -->
+      <div class="card">
+        <span class="ptype">Healthcare · Conversational AI</span>
+        <h3>Clinical Conversational Portal</h3>
+        <p>Lead developer on a Next.js clinical portal: session/survey lifecycle, a form scenario engine, and a
+          two-tier chatbot lifecycle — plus a reviewed RAG ingestion pipeline for a clinical-genetics knowledge
+          assistant.</p>
+        <div class="tags">
+          <span class="tag accent">RAG</span><span class="tag">Next.js</span>
+          <span class="tag">Healthcare</span><span class="tag">Chatbot</span>
+        </div>
+      </div>
+
+      <!-- SDK suite -->
+      <div class="card">
+        <span class="ptype">API / SDK Engineering</span>
+        <h3>Production SDK Suite</h3>
+        <p>Architected and shipped <strong>6 production REST SDKs</strong> across Python, PHP, and C#/.NET for
+          subscription-commerce, events, and e-commerce platforms — 25+ entity modules each with full CRUD,
+          OAuth 2.0, pagination, and API versioning.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">PHP</span><span class="tag">C# / .NET</span>
+          <span class="tag">REST</span><span class="tag">OAuth 2.0</span>
+        </div>
+      </div>
+
+    </div>
+  </div></section>
+
+  <section class="soft"><div class="container" style="text-align:center">
+    <h2 class="section-title reveal" style="margin-bottom:10px">Want to see more?</h2>
+    <p class="section-sub reveal" style="margin:0 auto 22px">My GitHub has the public work, including Dorpon's agent layer.</p>
+    <a class="btn btn-primary reveal" href="https://github.com/Meharaj002">Visit GitHub →</a>
+  </div></section>
+</main>
+
+<footer class="footer"><div class="container footer-inner">
+  <span>© <span data-year>2026</span> Meharaj Sami Siam</span>
+  <span>
+    <a href="https://github.com/Meharaj002">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/meharaj-sami-siam-a4b730213">LinkedIn</a> ·
+    <a href="mailto:mssiam12@gmail.com">Email</a>
+  </span>
+</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

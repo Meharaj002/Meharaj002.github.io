@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dorpon — Case Study · Meharaj Sami Siam</title>
+<meta name="description" content="Dorpon: a full-stack eyewear store with virtual try-on, exposed to AI agents via MCP and a UCP commerce protocol." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav"><div class="container nav-inner">
+  <a class="brand" href="index.html">Meharaj<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="cv.pdf" class="nav-cta">Resume</a>
+  </nav>
+</div></header>
+
+<main>
+  <section class="hero" style="padding-bottom:24px"><div class="container">
+    <a class="back-link" href="projects.html">← Back to projects</a>
+    <div class="eyebrow" style="margin-top:14px">Case study · Full-Stack · Agentic AI</div>
+    <h1 style="font-size:clamp(2rem,4.5vw,2.9rem)">Dorpon — a store humans <span class="grad">and AI agents</span> can shop</h1>
+    <p class="lead" style="font-size:1.1rem">
+      A premium eyewear storefront with browser-based virtual try-on and an AI concierge — and, uniquely,
+      a machine-readable commerce layer that lets external AI agents discover and transact with the store.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://dorpon-eyewear.netlify.app">Live demo →</a>
+      <a class="btn btn-ghost" href="https://github.com/Meharaj002">Code on GitHub</a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:8px"><div class="container">
+    <dl class="kvs reveal">
+      <dt>Role</dt><dd>Sole architect &amp; developer (end-to-end)</dd>
+      <dt>Type</dt><dd>Full-stack e-commerce + agentic AI infrastructure</dd>
+      <dt>Stack</dt><dd>Next.js · Django / DRF · PostgreSQL · AWS Bedrock (Claude) · MediaPipe</dd>
+      <dt>Protocols</dt><dd>Model Context Protocol (MCP) · UCP (ACP-aligned commerce REST)</dd>
+      <dt>Hosting</dt><dd>Render · Netlify · Neon · Supabase (all free-tier)</dd>
+    </dl>
+
+    <div class="prose reveal">
+      <h2 class="section-title" style="font-size:1.5rem">The idea</h2>
+      <p>
+        Online stores are built for human eyes. Dorpon is built for both humans and the AI agents that are
+        starting to shop on their behalf. It's a real eyewear store — catalog, cart, checkout, and a live
+        <strong>virtual try-on</strong> that overlays frames on your face in the browser — wrapped in an
+        AI concierge and a clean, machine-readable interface for agents.
+      </p>
+
+      <h2 class="section-title" style="font-size:1.5rem">The interesting part: one registry, three consumers</h2>
+      <p>
+        Every store capability (search, recommend, add-to-cart, checkout, start-try-on) is defined <em>once</em>
+        in a single tool registry. That registry powers three surfaces simultaneously:
+      </p>
+      <ul>
+        <li><strong>The website</strong> — an in-app AI concierge (AWS Bedrock / Claude) calls the tools.</li>
+        <li><strong>An MCP server</strong> — a stateless Streamable-HTTP endpoint (spec 2025-11-25) so assistants
+          like Claude and ChatGPT can connect and shop the store directly.</li>
+        <li><strong>A UCP commerce API</strong> — a discovery manifest at <code>/.well-known/ucp.json</code> with
+          JSON-Schema actions and RFC 9457 errors, aligned with the emerging Agentic Commerce Protocol.</li>
+      </ul>
+      <p>
+        Adding a new capability means writing one tool — it instantly appears in all three. A clean security
+        model gates it: anonymous agents get read/discovery tools; mutating and checkout actions require a
+        bearer token, so cross-user access is impossible by construction.
+      </p>
+
+      <h2 class="section-title" style="font-size:1.5rem">Virtual try-on</h2>
+      <p>
+        The try-on runs entirely in the browser: real-time face tracking drives a frame overlay, with predictive
+        motion smoothing so it stays locked on even on modest hardware — no GPU server required, which keeps
+        hosting free.
+      </p>
+
+      <h2 class="section-title" style="font-size:1.5rem">Shipped, end-to-end</h2>
+      <p>
+        Designed, built, secured, and deployed solo — frontend, backend, database, media storage, the agent
+        protocols, and CI — on entirely free-tier infrastructure, then documented for others to extend.
+      </p>
+    </div>
+
+    <div style="margin-top:30px" class="reveal">
+      <a class="btn btn-primary" href="https://dorpon-eyewear.netlify.app">Try the live demo →</a>
+      <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+    </div>
+  </div></section>
+</main>
+
+<footer class="footer"><div class="container footer-inner">
+  <span>© <span data-year>2026</span> Meharaj Sami Siam</span>
+  <span>
+    <a href="https://github.com/Meharaj002">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/meharaj-sami-siam-a4b730213">LinkedIn</a> ·
+    <a href="mailto:mssiam12@gmail.com">Email</a>
+  </span>
+</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
