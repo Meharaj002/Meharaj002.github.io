@@ -29,7 +29,7 @@ svg { display: block; }
 
 /* ---------- sidebar ---------- */
 .sidebar {
-  position: sticky; top: 0; align-self: start; height: 100vh;
+  position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: auto;
   background: #fff; border-right: 1px solid var(--line); padding: 46px 36px;
 }
 .sb-inner { display: flex; flex-direction: column; height: 100%; }
@@ -50,6 +50,20 @@ svg { display: block; }
 .sb-loc { font-weight: 500; color: var(--ink-2); }
 .sb-open { margin-top: 9px; display: flex; align-items: center; gap: 8px; }
 .sb-open .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); flex: none; }
+
+/* sidebar featured-project card */
+.sb-feature { display: block; margin-top: 26px; border: 1px solid var(--line); border-radius: 13px; overflow: hidden; background: #fff; transition: border-color .18s, box-shadow .18s, transform .18s; }
+.sb-feature:hover { border-color: var(--ink); box-shadow: 0 8px 24px rgba(0,0,0,.08); transform: translateY(-2px); }
+.sbf-thumb { position: relative; aspect-ratio: 2 / 1; background: #efeee9; }
+.sbf-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sbf-live { position: absolute; top: 9px; left: 9px; display: inline-flex; align-items: center; gap: 5px; background: rgba(0,0,0,.72); color: #fff; font-size: .62rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; padding: 3px 8px 3px 7px; border-radius: 999px; backdrop-filter: blur(2px); }
+.sbf-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #34d399; }
+.sbf-body { padding: 13px 14px 15px; }
+.sbf-label { font-size: .64rem; font-weight: 600; text-transform: uppercase; letter-spacing: .11em; color: var(--muted); }
+.sbf-title { font-weight: 700; font-size: 1rem; margin-top: 4px; display: flex; align-items: center; gap: 5px; }
+.sbf-arrow { color: var(--muted); font-weight: 500; transition: transform .18s; }
+.sb-feature:hover .sbf-arrow { transform: translate(2px, -2px); color: var(--ink); }
+.sbf-desc { color: var(--muted); font-size: .8rem; line-height: 1.5; margin-top: 6px; }
 
 /* ---------- main / tabs ---------- */
 .main { min-height: 100vh; }
