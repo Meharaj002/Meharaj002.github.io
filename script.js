@@ -40,26 +40,36 @@
   });
 
   // Email links (sidebar + Contact button): open the mail client via mailto AND
-  // copy the address with visible feedback, so they always do something even
-  // when no default mail app is configured.
-  function wireEmailCopy(el, label) {
-    if (!el || !label) return;
+  // copy the address. Feedback is shown as a floating toast so it never shifts
+  // the layout (changing the link text would reflow the row).
+  var toastTimer;
+  function showToast(msg) {
+    var t = document.getElementById("toast");
+    if (!t) {
+      t = document.createElement("div");
+      t.id = "toast";
+      t.className = "toast";
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    // force reflow so the transition replays on rapid repeats
+    void t.offsetWidth;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove("show"); }, 1800);
+  }
+  function wireEmailCopy(el) {
+    if (!el) return;
     el.addEventListener("click", function () {
       var addr = el.getAttribute("data-email");
       if (!addr || !navigator.clipboard || !navigator.clipboard.writeText) return;
       navigator.clipboard.writeText(addr).then(function () {
-        if (label.dataset.busy) return;
-        label.dataset.busy = "1";
-        var orig = label.textContent;
-        label.textContent = "Copied ✓";
-        setTimeout(function () { label.textContent = orig; delete label.dataset.busy; }, 1500);
+        showToast("Email copied — " + addr);
       }).catch(function () {});
     });
   }
-  var emailBtn = document.getElementById("email-btn");
-  wireEmailCopy(emailBtn, emailBtn);
-  var emailSide = document.getElementById("email-side");
-  wireEmailCopy(emailSide, emailSide && emailSide.querySelector(".sl-lbl"));
+  wireEmailCopy(document.getElementById("email-btn"));
+  wireEmailCopy(document.getElementById("email-side"));
 
   // Footer year
   var y = document.querySelector("[data-year]");

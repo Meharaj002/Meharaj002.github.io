@@ -167,6 +167,17 @@ code { font-size: .85em; background: #fff; border: 1px solid var(--line-2); padd
 
 .foot { margin-top: 44px; color: var(--faint); font-size: .82rem; }
 
+/* copy-confirmation toast (does not affect layout) */
+.toast {
+  position: fixed; left: 50%; bottom: 24px; z-index: 100;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--ink); color: #fff; font-size: .85rem; font-weight: 500;
+  padding: 10px 16px; border-radius: 9px; box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease;
+  max-width: 90vw;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
 /* ---------- responsive ---------- */
 @media (max-width: 920px) {
   .layout { grid-template-columns: 1fr; }
