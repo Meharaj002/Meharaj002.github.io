@@ -33,7 +33,8 @@
 
   // Collapsible experience cards
   document.querySelectorAll(".xp-head").forEach(function (head) {
-    head.addEventListener("click", function () {
+    head.addEventListener("click", function (e) {
+      if (e.target.closest("a")) return; // let company-name links open normally
       head.parentElement.classList.toggle("open");
     });
   });
