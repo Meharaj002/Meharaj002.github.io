@@ -39,23 +39,27 @@
     });
   });
 
-  // "Email me" — opens the mail client (mailto) AND copies the address with
-  // feedback, so it always does something even without a default mail app.
-  var emailBtn = document.getElementById("email-btn");
-  if (emailBtn) {
-    emailBtn.addEventListener("click", function () {
-      var addr = emailBtn.getAttribute("data-email");
-      if (addr && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(addr).then(function () {
-          if (emailBtn.dataset.busy) return;
-          emailBtn.dataset.busy = "1";
-          var orig = emailBtn.textContent;
-          emailBtn.textContent = "Email copied ✓";
-          setTimeout(function () { emailBtn.textContent = orig; delete emailBtn.dataset.busy; }, 1600);
-        }).catch(function () {});
-      }
+  // Email links (sidebar + Contact button): open the mail client via mailto AND
+  // copy the address with visible feedback, so they always do something even
+  // when no default mail app is configured.
+  function wireEmailCopy(el, label) {
+    if (!el || !label) return;
+    el.addEventListener("click", function () {
+      var addr = el.getAttribute("data-email");
+      if (!addr || !navigator.clipboard || !navigator.clipboard.writeText) return;
+      navigator.clipboard.writeText(addr).then(function () {
+        if (label.dataset.busy) return;
+        label.dataset.busy = "1";
+        var orig = label.textContent;
+        label.textContent = "Copied ✓";
+        setTimeout(function () { label.textContent = orig; delete label.dataset.busy; }, 1500);
+      }).catch(function () {});
     });
   }
+  var emailBtn = document.getElementById("email-btn");
+  wireEmailCopy(emailBtn, emailBtn);
+  var emailSide = document.getElementById("email-side");
+  wireEmailCopy(emailSide, emailSide && emailSide.querySelector(".sl-lbl"));
 
   // Footer year
   var y = document.querySelector("[data-year]");
