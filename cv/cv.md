@@ -1,7 +1,7 @@
 # MEHARAJ SAMI SIAM
 **Applied AI Engineer — Agentic AI, LLM, RAG & MCP**
 
-Dhaka, Bangladesh | mssiam12@gmail.com | +880 1796-537490 | [LinkedIn](https://www.linkedin.com/in/meharaj-sami-siam-a4b730213) | [GitHub](https://github.com/Meharaj002) | [Dorpon (live demo)](https://dorpon-eyewear.netlify.app)
+Dhaka, Bangladesh | mssiam12@gmail.com | +880 1796-537490 | [LinkedIn](https://www.linkedin.com/in/meharaj-sami-siam-a4b730213) | [GitHub](https://github.com/Meharaj002) | [Dorpon (live demo)](https://incomparable-pony-d965e8.netlify.app/)
 
 ---
 
@@ -32,7 +32,7 @@ Agentic AI & MCP | Large Language Models (LLMs) | Retrieval-Augmented Generation
 ## PROJECTS
 
 ### Dorpon — Agent-Ready Eyewear Commerce
-**Live demo: https://dorpon-eyewear.netlify.app** | Code: github.com/Meharaj002
+**Live demo: [https://dorpon-eyewear.netlify.app](https://incomparable-pony-d965e8.netlify.app/)** | Code: github.com/Meharaj002
 - Full-stack premium eyewear store (Next.js, Django / DRF) with browser-based **virtual try-on** and an AI shopping concierge on AWS Bedrock (Anthropic Claude).
 - Exposed the store to AI agents through a stateless **Model Context Protocol (MCP)** server and a **Universal Commerce Protocol (UCP)** REST layer (discovery manifest, JSON-Schema actions, RFC 9457 errors), aligned with the Agentic Commerce Protocol — one shared tool registry powering the web app, MCP, and REST. Deployed on free-tier cloud infrastructure (Render, Netlify, Neon, Supabase).
 
