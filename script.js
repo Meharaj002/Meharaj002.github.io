@@ -39,6 +39,24 @@
     });
   });
 
+  // "Email me" — opens the mail client (mailto) AND copies the address with
+  // feedback, so it always does something even without a default mail app.
+  var emailBtn = document.getElementById("email-btn");
+  if (emailBtn) {
+    emailBtn.addEventListener("click", function () {
+      var addr = emailBtn.getAttribute("data-email");
+      if (addr && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(function () {
+          if (emailBtn.dataset.busy) return;
+          emailBtn.dataset.busy = "1";
+          var orig = emailBtn.textContent;
+          emailBtn.textContent = "Email copied ✓";
+          setTimeout(function () { emailBtn.textContent = orig; delete emailBtn.dataset.busy; }, 1600);
+        }).catch(function () {});
+      }
+    });
+  }
+
   // Footer year
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
