@@ -1,14 +1,14 @@
-# Private CV working materials — kept locally, never published
-cv/notes.txt
-cv/engineering-contributions-meharaj-sami.md
-cv/Resume_MeharajSamiSiam_2024.pdf
+# --- Published repo = hosting essentials only ---
+# CV source & working materials are kept LOCALLY but never published.
+# The built résumé (cv.pdf, at repo root) IS published and linked by the site.
+cv/
 
-# Local tooling config
+# Local tooling / editor config
 .claude/
+.vscode/
 
 # OS / editor cruft
 Thumbs.db
 .DS_Store
 desktop.ini
 *~
-.vscode/

@@ -12,9 +12,9 @@ A clean, multi-page personal portfolio (Applied AI Engineer). Pure static HTML/C
 - `style.css` — shared styles · `script.js` — nav toggle + scroll reveal
 
 ## Résumé
-The nav "Resume" button and Contact "Download résumé" link point to `cv.pdf` (already in this
-folder). The CV source lives in [`cv/`](cv/): `cv.html` (formatted, ATS-friendly), `cv.md`, and
-`cv.docx`. This project is self-contained — it no longer depends on any other folder.
+The nav "Resume" button and Contact "Download résumé" link point to `cv.pdf` — the only résumé
+file that is published. The CV **source** (`cv.html`, `cv.md`, `cv.docx`, generator script) lives
+locally in `cv/`, which is **git-ignored** so it is never pushed — keep your own backup of it.
 
 To regenerate `cv.pdf` after editing `cv/cv.html` (headless Edge/Chrome):
 ```bash
