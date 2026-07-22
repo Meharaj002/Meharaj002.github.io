@@ -3,6 +3,10 @@
 # The built résumé (cv.pdf, at repo root) IS published and linked by the site.
 cv/
 
+# Personal job-hunt / study materials — local only, never published
+job-prep/
+linkedin-organizer/
+
 # Local tooling / editor config
 .claude/
 .vscode/
